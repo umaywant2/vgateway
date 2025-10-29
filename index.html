@@ -66,17 +66,14 @@
     <p>✨ Dev site for <strong>triadicframeworks.org</strong> ✨</p>
   </header>
 
-  <footer>
-    <nav>
-      <a href="https://github.com/umaywant2/TriadicFrameworks">TriadicFrameworks Repo</a>
-      <a href="https://dev.umaywant2.com">umaywant2.com</a>
-      <a href="https://dev.umaywant2.win">umaywant2.win</a>
-      <a href="https://dev.triadicwizards.win">Triadic Wizards</a>
-      <a href="https://dev.coeus.exchange">Coeus Exchange</a>
-    </nav>
-    <p style="margin-top:1rem; font-size:0.9rem; opacity:0.7;">
-      © 2025 Nawder Loswin — Mythmatical Architect
-    </p>
-  </footer>
+<div id="footer"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
